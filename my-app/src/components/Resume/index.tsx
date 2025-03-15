@@ -2,12 +2,9 @@ import React from "react";
 import * as C from "./styles";
 import ResumeItem from "../ResumeItem";
 import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown, FaDollarSign } from "react-icons/fa";
+import { ResumeProps } from "../types/types";
 
-interface ResumeProps {
-    expense: string | number;
-    income: string | number;
-    total: string | number;
-}
+
 
 const Resume: React.FC<ResumeProps> = ({ expense, income, total }) => {
     return (

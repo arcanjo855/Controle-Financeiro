@@ -2,7 +2,6 @@ import React from "react";
 import * as C from "./styles";
 import { FaRegArrowAltCircleUp, FaRegArrowAltCircleDown, FaTrash } from "react-icons/fa";
 
-// Definindo tipos para as props
 interface GridItemProps {
   item: {
     id: number;

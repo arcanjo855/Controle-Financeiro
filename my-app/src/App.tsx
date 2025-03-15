@@ -3,7 +3,7 @@ import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
 import Resume from "./components/Resume";
 import Form from "./components/Form";
-import { Transaction } from "./types"; 
+import { Transaction } from "./components/types/types"; 
 
 const App: React.FC = () => {
   const data = localStorage.getItem("transactions");

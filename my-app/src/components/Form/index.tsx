@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Grid from "../Grid";
 import * as C from "./styles";
-import { Transaction } from "../../types"; // Importando o tipo Transaction
+import { Transaction } from "../types/types"; // Importando o tipo Transaction
 
 interface FormProps {
   handleAdd: (transaction: Transaction) => void;
