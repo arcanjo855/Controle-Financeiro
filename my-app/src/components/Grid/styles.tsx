@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-// Tipagem para o componente Th, que recebe props
 interface ThProps {
   alignCenter?: boolean;
   width?: number;

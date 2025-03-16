@@ -1,12 +1,8 @@
 import React from "react";
 import * as C from "./styles";
-import { IconType } from "react-icons";
+import { ResumeItemProps } from "../types/types";
 
-interface ResumeItemProps {
-    title: string;
-    Icon: IconType;
-    value: string | number;
-}
+
 
 const ResumeItem: React.FC<ResumeItemProps> = ({ title, Icon, value }) => {
     return (

@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import Grid from "../Grid";
 import * as C from "./styles";
-import { Transaction } from "../types/types"; // Importando o tipo Transaction
+import { FormProps, Transaction } from "../types/types"; 
 
-interface FormProps {
-  handleAdd: (transaction: Transaction) => void;
-  transactionsList: Transaction[];
-  setTransactionsList: React.Dispatch<React.SetStateAction<Transaction[]>>;
-}
+
 
 const Form: React.FC<FormProps> = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const [desc, setDesc] = useState<string>("");

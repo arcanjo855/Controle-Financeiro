@@ -1,17 +1,9 @@
 import React from "react";
 import GridItem from "../GridItem";
 import * as C from "./styles";
+import { GridProps } from "../types/types";
 
-// Definindo tipos para as props
-interface GridProps {
-  itens: {
-    id: number;
-    desc: string;
-    amount: number;
-    expense: boolean;
-  }[];
-  setItens: React.Dispatch<React.SetStateAction<any[]>>;
-}
+
 
 const Grid: React.FC<GridProps> = ({ itens, setItens }) => {
   const onDelete = (ID: number): void => {
