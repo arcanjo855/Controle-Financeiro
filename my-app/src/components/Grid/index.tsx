@@ -2,15 +2,22 @@ import React from "react";
 import GridItem from "../GridItem";
 import * as C from "./styles";
 import { GridProps } from "../types/types";
+import { useGetTransactionList } from "../../hooks/useGetTransactionList";
 
 
 
 const Grid: React.FC<GridProps> = ({ itens, setItens }) => {
+  const {data,loading} =useGetTransactionList();
+
   const onDelete = (ID: number): void => {
     const newArray = itens.filter((transaction) => transaction.id !== ID);
     setItens(newArray);
     localStorage.setItem("transations", JSON.stringify(newArray));
   };
+
+  if (loading) {
+    return <h1>Carregando</h1>
+  }
 
   return (
     <C.Table>
@@ -25,7 +32,7 @@ const Grid: React.FC<GridProps> = ({ itens, setItens }) => {
         </C.Tr>
       </C.Thead>
       <C.Tbody>
-        {itens?.map((item, index) => (
+        {data?.map((item, index) => (
           <GridItem key={index} item={item} onDelete={onDelete} />
         ))}
       </C.Tbody>

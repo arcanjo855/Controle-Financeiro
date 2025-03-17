@@ -8,7 +8,7 @@ const GridItem: React.FC<GridItemProps> = ({ item, onDelete }) => {
   return (
     <C.Tr>
       <C.Td>{item.desc}</C.Td>
-      <C.Td>{`R$ ${(item.amount.toFixed(2))}`}</C.Td>
+      <C.Td>{(`R$ ${(item.amount).toFixed(2)}`)}</C.Td>
       <C.Td alignCenter>
         {item.expense ? (
           <FaRegArrowAltCircleDown color="red" />
