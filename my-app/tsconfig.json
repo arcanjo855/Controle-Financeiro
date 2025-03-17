@@ -1,9 +1,13 @@
 {
-    "compilerOptions": {    
-        "lib": ["dom", "dom.iterable", "esnext"],    
-        "target": "ESNext",    
-        "types": ["vite/client"],
-        "isolatedModules": true,
+    "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "jsx": "react-jsx",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "moduleResolution": "node"
     },
     "include": ["src"],
   }
