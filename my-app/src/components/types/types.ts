@@ -7,22 +7,21 @@ export interface Transaction {
   expense: boolean;
 }
 
+
+export interface GridProps {
+  itens: {
+    id: number;
+    desc: string;
+    amount: number;
+    expense: boolean;
+  }[];
+  setItens: React.Dispatch<React.SetStateAction<any[]>>;
+}
+
 export interface FormProps {
   handleAdd: (transaction: Transaction) => void;
   transactionsList: Transaction[];
   setTransactionsList: React.Dispatch<React.SetStateAction<Transaction[]>>;
-}
-
-export interface ResumeProps {
-    expense: string | number;
-    income: string | number;
-    total: string | number;
-}
-
-export interface ResumeItemProps {
-    title: string;
-    Icon: IconType;
-    value: string | number;
 }
 
 
@@ -36,12 +35,16 @@ export interface GridItemProps {
   onDelete: (id: number) => void;
 }
 
-export interface GridProps {
-  itens: {
-    id: number;
-    desc: string;
-    amount: number;
-    expense: boolean;
-  }[];
-  setItens: React.Dispatch<React.SetStateAction<any[]>>;
+
+export interface ResumeItemProps {
+    title: string;
+    Icon: IconType;
+    value: string | number;
+}
+
+
+export interface ResumeProps {
+  expense: string | number;
+  income: string | number;
+  total: string | number;
 }

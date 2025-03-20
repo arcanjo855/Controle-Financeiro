@@ -4,7 +4,6 @@ import Header from "./components/Header";
 import Resume from "./components/Resume";
 import Form from "./components/Form";
 import { Transaction } from "./components/types/types"; 
-import Grid from "./components/Grid";
 
 const App: React.FC = () => {
   const data = localStorage.getItem("transactions");
@@ -31,7 +30,7 @@ const App: React.FC = () => {
 
     setIncome(`R$ ${income}`);
     setExpense(`R$ ${expense}`);
-    setTotal(`${Number(income) < Number(expense) ? "-" : "+"} R$ ${total}`);
+    setTotal(`${Number(income) < Number(expense) ? "-" : ""} R$ ${total}`);
   }, [transactionsList]);
 
   const handleAdd = (transaction: Transaction) => {
@@ -46,7 +45,6 @@ const App: React.FC = () => {
       <Header />
       <Resume income={income} expense={expense} total={total} />
       <Form handleAdd={handleAdd} transactionsList={transactionsList} setTransactionsList={setTransactionsList} />
-      <Grid itens={transactionsList} setItens={setTransactionsList} />
       <GlobalStyle />
     </>
   );

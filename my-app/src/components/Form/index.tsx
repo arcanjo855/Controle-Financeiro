@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import Grid from "../Grid";
 import * as C from "./styles";
 import { FormProps, Transaction } from "../types/types"; 
 
 
 
-const Form: React.FC<FormProps> = ({ handleAdd }) => {
+const Form: React.FC<FormProps> = ({ handleAdd, transactionsList, setTransactionsList }) => {
   const [desc, setDesc] = useState<string>("");
   const [amount, setAmount] = useState<string>("");
   const [isExpensive, setExpense] = useState<boolean>(false);
@@ -69,6 +70,7 @@ const Form: React.FC<FormProps> = ({ handleAdd }) => {
         </C.RadioGroup>
         <C.Button onClick={handleSave}>ADICIONAR</C.Button>
       </C.Container>
+      <Grid itens={transactionsList} setItens={setTransactionsList} />
     </>
   );
 };
